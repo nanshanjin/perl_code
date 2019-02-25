@@ -1,2 +1,2 @@
 # personal script
-test
+the script is my own script 
