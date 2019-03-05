@@ -16,7 +16,7 @@ GetOptions(
 &USAGE unless ($fin );
 sub USAGE {#
         my $usage=<<"USAGE";
-Contact:        nanshan.yang\@sinotechgenomics.com;
+Contact:        nanshan.yang;
 Script:			$Script
 Description:
     script to tran table data	
