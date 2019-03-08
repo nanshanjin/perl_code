@@ -1,7 +1,6 @@
 #######################################################################
-# Author           :	       	
-# Email            :
-# Last modified    :		2016-06-28 11:05
+# Author           :	     nanshan yang  	
+# Email            :         nanshangogo@163.com
 # Filename         :		sam_flagstat.py
 # Description      :		a_:array;d_:dict 	
 #######################################################################
