@@ -1,0 +1,8 @@
+library("ape")
+m1<-read.table("trit2.txt",header=F,sep="\t")
+m2<-read.table("mentel.xls",header=F,sep="\t")
+#mm1<-as.matrix(m1)
+#mm2<-as.matrix(m2)
+png("ceshi.png",height=900,width=1600)
+mantel.test(m1, m2, nperm = 999,graph=TRUE,alternative = "two.sided")
+dev.off()
