@@ -1,6 +1,7 @@
 #######################################################################
-# Author           :	     nanshan yang  	
-# Email            :         nanshangogo@163.com
+# Author           :	       	dingwei
+# Email            :		dingwei@novogene.com
+# Last modified    :		2016-06-28 11:05
 # Filename         :		sam_flagstat.py
 # Description      :		a_:array;d_:dict 	
 #######################################################################
@@ -53,6 +54,12 @@ for each in HTSeq.BAM_Reader(bam):
 		#stat[chr]['dup'] += 1
 		dup+=1
 	
+
+#print 'chrom\tPrimary\tNotPrimary\tDup\tPE\tSE\tNot aligned'
+
+#for each in chrs:
+#	print '%s\t%d\t%d\t%d\t%d\t%d\t%d' % (each,stat[each]['ta'],stat[each]['np'],stat[each]['dup'],stat[each]['pe'],stat[each]['se'],stat[each]['na'])
+#print '*\t%d' % stat['*']
 total=ta+nm
 se=se+se
 #print ta,np,dup,pe,se,nm,dchr,dchr_5
