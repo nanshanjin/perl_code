@@ -1,5 +1,5 @@
 times<-Sys.time() 
-library('qqman',lib.loc="/home/Group/dna/soft/GWAS/R-package")
+library('qqman',lib.loc="/home/Group/dna/gwaspipe/soft/R-package")
 library('getopt')
 options(bitmapType='cairo')
 spec = matrix(c(
@@ -25,14 +25,12 @@ if ( is.null(opt$infile) ) { print_usage(spec) }
 if ( is.null(opt$outfile) ) { print_usage(spec) }
 
 mydata<-read.table(opt$infile,header = TRUE,sep="")
-newdata<-na.omit(mydata)
+#newdata<-na.omit(mydata)
 png(paste(opt$outfile,".png",sep=""),height=900,width=1800)
-#,"X","Y"
-manhattan(newdata,suggestiveline=-log10(1e-3),cex.lab=1.1,chrlabs = c(1:22),col = c("blue4", "orange3"),cex.axis = 1.5,cex = 1.2,main = "Manhattan Plot")
+manhattan(mydata,suggestiveline =-log10(1e-5),cex.lab=1.1,chrlabs = c(1:22),col = c("black","red","green","blue","lightblue","Purple","yellow","Grey"),cex.axis = 1.5,cex = 1.2,main = "Manhattan Plot",annotatePval=0.00001,genomewideline =F,annotateTop=F)
 dev.off()
 pdf(paste(opt$outfile,".pdf",sep=""),height=10,width=18)
-#"X","Y"
-manhattan(newdata,suggestiveline=-log10(1e-3),cex.lab=1.1,chrlabs = c(1:22),col = c("blue4", "orange3"),cex.axis = 1.5,cex = 1.2,main="Manhattan Plot")
+manhattan(mydata,suggestiveline=-log10(1e-5),cex.lab=1.1,chrlabs = c(1:22),col = c("black","red","green","blue","lightblue","Purple","yellow","Grey"),cex.axis = 1.5,cex = 1.2,main="Manhattan Plot",annotatePval=0.00001,genomewideline =F,annotateTop=F)
 dev.off()
 png(paste(opt$outfile,".QQ.png",sep=""),height=900,width=1600)
 qq(mydata$P)

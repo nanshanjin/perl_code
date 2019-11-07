@@ -1,0 +1,5 @@
+library(ggplot2)
+a <- read.table("snp.type.new.txt",header=TRUE,sep="\t")
+pdf("snp.bar.pdf",width=14, height = 12)
+ggplot(a,aes(x=snp,y=number,fill=type),colour=c("red","yellow"))+geom_bar(stat="identity",position="dodge")+theme(axis.text.x=element_text(angle=30,hjust=1,vjust=1))+theme_bw()+theme(panel.background = element_rect(fill = "transparent",colour = NA),panel.grid.minor = element_blank(),panel.grid.major = element_blank(),plot.background = element_rect(fill = "transparent",colour = NA))
+dev.off()
