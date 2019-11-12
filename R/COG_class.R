@@ -1,6 +1,5 @@
 #!/usr/bin/Rscript 
 args <- commandArgs(trailingOnly = TRUE)
-author  <- "Deng hongjuan "
 version <- "v0.1.0, 2017/7/27"
 
 Usage_and_Arguments <- function(author, version){
